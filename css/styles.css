@@ -1,0 +1,341 @@
+/**All coklor VARIABLES to be used in thge style sheet**/
+:root {
+  --background-color: #F0FFFF;
+  --primary-color:  #2F4F4F;
+  --secondary-color: #054149;
+  --dark-grey: #2b2b2b;
+  --hover-color: #00FFFF;
+  --active-visited-color: #064457; 
+  --button-color: #2F4F4F; 
+  --button-letter: #FFFFFF;
+  --border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+  --a-text-color: #034D50;
+  --a-text-decoration: #004864; 
+  --hover-color: #00FFFF;
+  --grid-box-color: #7FFFD4;
+  --flame0: #edc655;
+  --flame50: #fcffad;
+  --flame100: #f76414;
+  /**Fonts and more**/
+  --body-font: font-family 'BIZ UDPGothic', sans-serif;
+  --body-font-weight: font-weight 300;
+  --body-font-size: 18px line-height 1.6;
+  /**H1**/
+  --h1-font-size: font-size 28 font-weight 600;
+  /**<P>**/
+  --p-font-size: 16 font-weight 300;
+}
+
+* {
+  box-sizing: border-box;
+}
+  /***BODY***/
+  body {
+    /***SITE BACKGROUND COLOR***/
+    background-color: var(--background-color);
+    /***BODY (covers all until overwritten per element Background and Typography***/
+    font-family: 'BIZ UDPGothic', sans-serif; 
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  /*Headlin/Title**/
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-align: center;
+  }
+  
+  /**Typographie for general paragraphs**/
+  p { 
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+  /*Link desing and other functions*/
+  a {
+    color: var(--a-text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--a-text-decoration);
+    text-decoration-thickness: 3px;
+  }
+
+.table {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+.h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: auto;
+  margin-left: auto;
+}
+  .shaya-things {
+    display: table;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .shaya-list {
+    display: inline-block;
+    list-style-type: none;
+  }
+
+  .form {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  a:visited {
+    color: var(--active-visited-color);
+    text-decoration: underline;
+    text-decoration-color: var(--active-visited-color);
+    text-decoration-thickness: 3px;
+  }
+  
+  a:active {
+    color: var(--active-visited-color);
+    text-decoration: underline;
+    text-decoration-color: var(--active-visited-color);
+    text-decoration-thickness: 3px;
+  }
+  
+  a:hover, :focus {
+    text-decoration: none;
+    color: var(--hover-color);
+    font-weight: 400;
+  }
+  
+  /*Button styling and acting functions*/ 
+  button {
+    border: none;
+    font-family: inherit;
+    background-color: var(--button-color);
+    color: var(--button-letter);
+    text-decoration: none;
+    padding: 25px;
+    border-radius: 5px;
+    margin: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 3px;
+    border-bottom: 5px solid var(--border-bottom);
+  
+  }
+  
+  a.button {
+    margin-right: auto;
+    margin-left: auto;
+    display: table;
+  }
+  
+  button:hover, button:focus {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  .profile {  
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .profile__portrait {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+  }
+  .contact-portrait {
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  .page-footer {
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.navigation-list {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.grid__item {
+  background-color: var(--grid-box-color); 
+  padding: 20px;
+  margin: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.grid__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+}
+
+/*Grid fallback starts here for browsers that do not support css grid*/
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+/*grid fallback ends here*/
+
+@supports (display: grid) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+  }
+  .grid__item {
+    background-color: var(--grid-box-color);
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
+  .grid__item:last-child {
+      grid-column: 3 / 3;
+      grid-row:  1 / 3;
+  }
+}
+
+
+
+/*combining all the above media quaries, but only with the unique parts*/
+@media all and (max-width: 500px ) {
+.grid {
+  grid-template-columns: 1fr;
+}
+}
+
+@media  all and (min-width: 500px) and (max-width: 750px) {
+.grid {
+  grid-template-columns: 1fr 1fr;
+}
+}
+
+@media all and (max-width: 750px) {
+.grid {
+  grid-gap: 10px;
+}
+.grid__item:last-child {
+  grid-column: auto / auto;
+  grid-row: auto / auto;
+}
+h1 {
+  font-size: 22px;
+}
+}
+
+
+button, 
+.button {
+  border: none;
+  font-family: inherit;
+  background-color: var(--button-color);
+  color: var(--button-letter);
+  text-decoration: none;
+  padding: 25px;
+  border-radius: 5px;
+  margin: 20px;
+  border-radius: 3px;
+  border-bottom: 5px solid var(--border-bottom);
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.button, button {
+  border: none;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: inherit;
+  background-color: var(--button-color);
+  color: var(--button-letter);
+  text-decoration: none;
+  padding: 25px;
+  border-radius: 5px;
+  border-bottom: 4px solid var(border-bottom);
+  transition-duration: 0.2s;
+  transition-property: opacity 0.7;
+}
+
+@keyframes color-change {
+  0% {
+    fill: var(--flame0);
+  }
+  50% {
+    fill: var(--flame50);
+  }
+  100% {
+    fill: var(--flame100);
+  }
+}
+
+.flame {
+  animation:  4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
