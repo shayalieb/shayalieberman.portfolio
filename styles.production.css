@@ -20,7 +20,7 @@ body {
   line-height: 1.6;
 }
 
-/*Headlin/Title**/
+/*Headline/Title**/
 h1 {
   font-size: 28px;
   font-weight: 600;
@@ -28,14 +28,14 @@ h1 {
   text-align: center;
 }
 
-/**Typographie for general paragraphs**/
+/**Typography for general paragraphs**/
 p {
   font-size: 16px;
   font-weight: 300;
   text-align: center;
 }
 
-/*Link desing and other functions*/
+/*Link design and other functions*/
 a {
   color: #034D50;
   text-decoration: underline;
