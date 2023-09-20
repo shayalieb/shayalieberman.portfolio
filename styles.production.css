@@ -394,3 +394,28 @@ button {
 ul {
   list-style-type: none;
 }
+
+.case-study-text {
+  float: left;
+  margin-right: 10%;
+  margin-left: 15px;
+  text-align: center;
+}
+
+.case-img-container {
+  float: right;
+  margin-left: auto;
+}
+
+.content-container {
+  display: flex;
+}
+
+.case-study-text, .case-img-container {
+  flex: 1;
+}
+
+.case-pic {
+  width: 500px;
+  height: 400px;
+}
